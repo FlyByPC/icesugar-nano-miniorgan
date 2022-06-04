@@ -20,51 +20,51 @@
             "pins": [
               {
                 "index": "7",
-                "name": "PMOD2",
-                "value": "C6"
+                "name": "PMOD7",
+                "value": "B1"
               },
               {
                 "index": "6",
-                "name": "PMOD4",
-                "value": "E3"
-              },
-              {
-                "index": "5",
-                "name": "PMOD6",
-                "value": "C2"
-              },
-              {
-                "index": "4",
-                "name": "PMOD8",
-                "value": "A1"
-              },
-              {
-                "index": "3",
-                "name": "PMOD1",
-                "value": "B4"
-              },
-              {
-                "index": "2",
-                "name": "PMOD3",
-                "value": "B5"
-              },
-              {
-                "index": "1",
                 "name": "PMOD5",
                 "value": "E1"
               },
               {
+                "index": "5",
+                "name": "PMOD3",
+                "value": "B5"
+              },
+              {
+                "index": "4",
+                "name": "PMOD1",
+                "value": "B4"
+              },
+              {
+                "index": "3",
+                "name": "PMOD8",
+                "value": "A1"
+              },
+              {
+                "index": "2",
+                "name": "PMOD6",
+                "value": "C2"
+              },
+              {
+                "index": "1",
+                "name": "PMOD4",
+                "value": "E3"
+              },
+              {
                 "index": "0",
-                "name": "PMOD7",
-                "value": "B1"
+                "name": "PMOD2",
+                "value": "C6"
               }
             ],
             "virtual": false,
             "clock": false
           },
           "position": {
-            "x": -128,
-            "y": -520
+            "x": -184,
+            "y": -600
           }
         },
         {
@@ -82,8 +82,8 @@
             "virtual": false
           },
           "position": {
-            "x": 512,
-            "y": 8
+            "x": 472,
+            "y": -64
           }
         },
         {
@@ -95,8 +95,8 @@
             "local": true
           },
           "position": {
-            "x": -1120,
-            "y": -56
+            "x": -1160,
+            "y": -128
           }
         },
         {
@@ -108,8 +108,8 @@
             "local": true
           },
           "position": {
-            "x": -1024,
-            "y": -120
+            "x": -1064,
+            "y": -192
           }
         },
         {
@@ -121,8 +121,8 @@
             "local": true
           },
           "position": {
-            "x": -928,
-            "y": -184
+            "x": -968,
+            "y": -256
           }
         },
         {
@@ -134,8 +134,8 @@
             "local": true
           },
           "position": {
-            "x": -832,
-            "y": -248
+            "x": -872,
+            "y": -320
           }
         },
         {
@@ -147,8 +147,8 @@
             "local": true
           },
           "position": {
-            "x": -736,
-            "y": -312
+            "x": -776,
+            "y": -384
           }
         },
         {
@@ -160,8 +160,8 @@
             "local": true
           },
           "position": {
-            "x": -640,
-            "y": -376
+            "x": -680,
+            "y": -448
           }
         },
         {
@@ -173,8 +173,8 @@
             "local": true
           },
           "position": {
-            "x": -544,
-            "y": -440
+            "x": -584,
+            "y": -512
           }
         },
         {
@@ -186,8 +186,8 @@
             "local": true
           },
           "position": {
-            "x": -448,
-            "y": -504
+            "x": -488,
+            "y": -576
           }
         },
         {
@@ -236,20 +236,20 @@
             }
           },
           "position": {
-            "x": -224,
-            "y": -200
+            "x": -264,
+            "y": -272
           },
           "size": {
-            "width": 720,
-            "height": 432
+            "width": 384,
+            "height": 576
           }
         },
         {
           "id": "caefb8af-3fb9-42a5-89a0-b13b55c38c81",
           "type": "435b29b7b65c2c6d3c3df9bacef7e063156a0f7f",
           "position": {
-            "x": -1120,
-            "y": 88
+            "x": -1160,
+            "y": 16
           },
           "size": {
             "width": 96,
@@ -260,8 +260,8 @@
           "id": "417a8338-533c-4ed0-b7e7-fca4bc7906f2",
           "type": "435b29b7b65c2c6d3c3df9bacef7e063156a0f7f",
           "position": {
-            "x": -1024,
-            "y": 24
+            "x": -1064,
+            "y": -48
           },
           "size": {
             "width": 96,
@@ -272,8 +272,8 @@
           "id": "d1516560-a538-4a40-b301-e5caee79b770",
           "type": "435b29b7b65c2c6d3c3df9bacef7e063156a0f7f",
           "position": {
-            "x": -928,
-            "y": -40
+            "x": -968,
+            "y": -112
           },
           "size": {
             "width": 96,
@@ -284,8 +284,8 @@
           "id": "8656ebbd-6fda-4090-a0b0-e79d5ce30fab",
           "type": "435b29b7b65c2c6d3c3df9bacef7e063156a0f7f",
           "position": {
-            "x": -832,
-            "y": -104
+            "x": -872,
+            "y": -176
           },
           "size": {
             "width": 96,
@@ -296,8 +296,8 @@
           "id": "671a973e-243c-44d8-871a-abe4164d8d47",
           "type": "435b29b7b65c2c6d3c3df9bacef7e063156a0f7f",
           "position": {
-            "x": -736,
-            "y": -176
+            "x": -776,
+            "y": -248
           },
           "size": {
             "width": 96,
@@ -308,8 +308,8 @@
           "id": "944ea9ab-2712-466c-95af-3b9dd0cab403",
           "type": "435b29b7b65c2c6d3c3df9bacef7e063156a0f7f",
           "position": {
-            "x": -640,
-            "y": -240
+            "x": -680,
+            "y": -312
           },
           "size": {
             "width": 96,
@@ -320,8 +320,8 @@
           "id": "7284f8fe-1b6f-47d6-bd18-d201f4999096",
           "type": "435b29b7b65c2c6d3c3df9bacef7e063156a0f7f",
           "position": {
-            "x": -544,
-            "y": -304
+            "x": -584,
+            "y": -376
           },
           "size": {
             "width": 96,
@@ -332,8 +332,8 @@
           "id": "a14851a9-28d8-46f0-b9e1-e7f7b7cdeb70",
           "type": "435b29b7b65c2c6d3c3df9bacef7e063156a0f7f",
           "position": {
-            "x": -448,
-            "y": -368
+            "x": -488,
+            "y": -440
           },
           "size": {
             "width": 96,
@@ -351,6 +351,12 @@
             "block": "e7bb1a11-d0cc-4e06-837f-6b441fe82497",
             "port": "notes"
           },
+          "vertices": [
+            {
+              "x": -240,
+              "y": -288
+            }
+          ],
           "size": 8
         },
         {
@@ -458,8 +464,8 @@
           },
           "vertices": [
             {
-              "x": -328,
-              "y": -240
+              "x": -368,
+              "y": -312
             }
           ]
         },
@@ -474,8 +480,8 @@
           },
           "vertices": [
             {
-              "x": -392,
-              "y": -216
+              "x": -432,
+              "y": -288
             }
           ]
         },
@@ -490,8 +496,8 @@
           },
           "vertices": [
             {
-              "x": -968,
-              "y": 184
+              "x": -1008,
+              "y": 112
             }
           ]
         },
@@ -506,8 +512,8 @@
           },
           "vertices": [
             {
-              "x": -856,
-              "y": 96
+              "x": -896,
+              "y": 24
             }
           ]
         },
@@ -522,8 +528,8 @@
           },
           "vertices": [
             {
-              "x": -760,
-              "y": 88
+              "x": -800,
+              "y": 16
             }
           ]
         },
@@ -538,8 +544,8 @@
           },
           "vertices": [
             {
-              "x": -696,
-              "y": 32
+              "x": -736,
+              "y": -40
             }
           ]
         },
@@ -554,8 +560,8 @@
           },
           "vertices": [
             {
-              "x": -592,
-              "y": -16
+              "x": -632,
+              "y": -88
             }
           ]
         },
@@ -570,8 +576,8 @@
           },
           "vertices": [
             {
-              "x": -488,
-              "y": -88
+              "x": -528,
+              "y": -160
             }
           ]
         }
