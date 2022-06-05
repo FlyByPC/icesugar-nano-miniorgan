@@ -175,19 +175,20 @@ module v435b29_vac7386 #(
  input clk_in,
  output clk_out
 );
- //-- Number of bits of the prescaler
- //parameter N = 22;
+ //Produces the requested frequency,
+ //from an input clock of 12MHz.
  
  //-- divisor register
- reg [31:0] divcounter;
+ reg [22:0] divcounter;
  reg ff;
  
- //localparam mycount=6000000/FREQ; //12MHz
+ localparam clockfreq=12000000; //12MHz
  
  //-- N bit counter
  always @(posedge clk_in) begin
    divcounter <= divcounter + FREQ;
-   if (divcounter >= 6000000) begin
+   if (divcounter >= (clockfreq/2)) begin
+     //divcounter <= divcounter - 6000000; //More accurate?
      divcounter <= 0;
      ff <= ~ff;
      end
@@ -211,35 +212,14 @@ module main_v55c246 (
  output tone
 );
  reg[3:0] theTone;
+ reg[7:0] notereg;
  reg[3:0] theCount;
  
  always @ (*) begin
- 
- 
-   theCount = 
-     notes[7]+
-     notes[6]+
-     notes[5]+
-     notes[4]+
-     notes[3]+
-     notes[2]+
-     notes[1]+
-     notes[0];
-     
- 
-   theTone = 
-          (N7 & notes[7]) + 
-          (N6 & notes[6]) +
-          (N5 & notes[5]) + 
-          (N4 & notes[4]) + 
-          (N3 & notes[3]) + 
-          (N2 & notes[2]) + 
-          (N1 & notes[1]) +
-          (N0 & notes[0]);
-          
-          
+   theCount = $countones(notes);
+   notereg = {N7,N6,N5,N4,N3,N2,N1,N0} & notes;
+   theTone = $countones(notereg);
    end
    
  assign tone = (theTone*2>theCount);  
- 
 endmodule

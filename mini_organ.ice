@@ -82,8 +82,8 @@
             "virtual": false
           },
           "position": {
-            "x": 472,
-            "y": -64
+            "x": 328,
+            "y": -80
           }
         },
         {
@@ -194,7 +194,7 @@
           "id": "e7bb1a11-d0cc-4e06-837f-6b441fe82497",
           "type": "basic.code",
           "data": {
-            "code": "reg[3:0] theTone;\nreg[3:0] theCount;\n\nalways @ (*) begin\n\n\n  theCount = \n    notes[7]+\n    notes[6]+\n    notes[5]+\n    notes[4]+\n    notes[3]+\n    notes[2]+\n    notes[1]+\n    notes[0];\n    \n\n  theTone = \n         (N7 & notes[7]) + \n         (N6 & notes[6]) +\n         (N5 & notes[5]) + \n         (N4 & notes[4]) + \n         (N3 & notes[3]) + \n         (N2 & notes[2]) + \n         (N1 & notes[1]) +\n         (N0 & notes[0]);\n         \n         \n  end\n  \nassign tone = (theTone*2>theCount);  \n",
+            "code": "reg[3:0] theTone;\nreg[7:0] notereg;\nreg[3:0] theCount;\n\nalways @ (*) begin\n  theCount = $countones(notes);\n  notereg = {N7,N6,N5,N4,N3,N2,N1,N0} & notes;\n  theTone = $countones(notereg);\n  end\n  \nassign tone = (theTone*2>theCount);  ",
             "params": [],
             "ports": {
               "in": [
@@ -237,11 +237,11 @@
           },
           "position": {
             "x": -264,
-            "y": -272
+            "y": -160
           },
           "size": {
-            "width": 384,
-            "height": 576
+            "width": 480,
+            "height": 224
           }
         },
         {
@@ -494,12 +494,7 @@
             "block": "e7bb1a11-d0cc-4e06-837f-6b441fe82497",
             "port": "N0"
           },
-          "vertices": [
-            {
-              "x": -1008,
-              "y": 112
-            }
-          ]
+          "vertices": []
         },
         {
           "source": {
@@ -511,6 +506,10 @@
             "port": "N1"
           },
           "vertices": [
+            {
+              "x": -896,
+              "y": 8
+            },
             {
               "x": -896,
               "y": 24
@@ -528,8 +527,8 @@
           },
           "vertices": [
             {
-              "x": -800,
-              "y": 16
+              "x": -808,
+              "y": -24
             }
           ]
         },
@@ -637,7 +636,7 @@
               "id": "2330955f-5ce6-4d1c-8ee4-0a09a0349389",
               "type": "basic.code",
               "data": {
-                "code": "//-- Number of bits of the prescaler\n//parameter N = 22;\n\n//-- divisor register\nreg [31:0] divcounter;\nreg ff;\n\n//localparam mycount=6000000/FREQ; //12MHz\n\n//-- N bit counter\nalways @(posedge clk_in) begin\n  divcounter <= divcounter + FREQ;\n  if (divcounter >= 6000000) begin\n    divcounter <= 0;\n    ff <= ~ff;\n    end\n  end\n\n//-- Use the most significant bit as output\nassign clk_out = ff;\n",
+                "code": "//Produces the requested frequency,\n//from an input clock of 12MHz.\n//(We divide by 6M/FREQ and then use a FF)\n\n//-- divisor register\nreg [22:0] divcounter;\nreg ff;\n\n//localparam mycount=6000000/FREQ; //12MHz\n\n//-- N bit counter\nalways @(posedge clk_in) begin\n  divcounter <= divcounter + FREQ;\n  if (divcounter >= 6000000) begin\n    //divcounter <= divcounter - 6000000; //More accurate?\n    divcounter <= 0;\n    ff <= ~ff;\n    end\n  end\n\n//-- Use the most significant bit as output\nassign clk_out = ff;\n",
                 "params": [
                   {
                     "name": "FREQ"
